@@ -49,59 +49,59 @@ Notes on the AI Chatbot on the Landing page created with [FlowiseAI](https://flo
 
 SmartAgent has a landing page for Customers and SmartAgent users.
 
-![SmartAgent landing page](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/1_LandingPage.png?raw=true)
+![SmartAgent landing page](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/1_LandingPage.png?raw=true)
 
 <br />
 
 Customers can submit requests via the form on the landing page, or by emailing SmartAgent email directly.
 
-![Customer Support Request Form](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/2_CustomerSupportRequestForm.png?raw=true)
+![Customer Support Request Form](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/2_CustomerSupportRequestForm.png?raw=true)
 
 <br />
 
 There is also an AI chatbot on the landing page to assist with general questions regarding the SmartAgent application.
 
-![AI Chatbot](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/3_Chatbot.png?raw=true)
+![AI Chatbot](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/3_Chatbot.png?raw=true)
 
 <br />
 
 When a SmartAgent user is logged in, they can view the main application inbox:
 
-![SmartAgent Inbox](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/4_SmartAgentInbox.png?raw=true)
+![SmartAgent Inbox](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/4_SmartAgentInbox.png?raw=true)
 
 <br />
 
 Agents are able to chat within the application.
 
-![Agent Chat](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/5_AgentChat.png?raw=true)
+![Agent Chat](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/5_AgentChat.png?raw=true)
 
 <br />
 
 A SmartAgent user can transfer the ticket to another agent.
 
-![Transfer ticket](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/6_TransferTicket.png?raw=true)
+![Transfer ticket](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/6_TransferTicket.png?raw=true)
 
 
 <br />
 
 This is the ticket view. 
 
-![Ticket view](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/7_TicketView.png?raw=true)
+![Ticket view](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/7_TicketView.png?raw=true)
 
 <br />
 
 The ticket notes can be viewed in the side panel that appears when you click on 'Ticket Notes'. 
 
-![Ticket Notes](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/8_TicketNotes.png?raw=true)
+![Ticket Notes](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/8_TicketNotes.png?raw=true)
 
 <br />
 
 SmartAgents can send email responses directly in the ticket.
 
-![Ticket reply](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/9_TicketReply.png?raw=true)
+![Ticket reply](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/9_TicketReply.png?raw=true)
 
 <br />
 
 There is also a Dashboard with the SmartAgent's performance stats.
 
-![Dashboard](https://github.com/glowiep/SmartAgent/blob/main/planning/docs/10_Dashboard.png?raw=true)
+![Dashboard](https://github.com/glowiep/SmartAgent-React/blob/main/public/images/10_Dashboard.png?raw=true)
