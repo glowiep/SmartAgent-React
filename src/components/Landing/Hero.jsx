@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import RequestForm from "./RequestForm";
 import Footer from "../Footer/Footer";
-import { BubbleChat } from 'flowise-embed-react'
+// import { BubbleChat } from 'flowise-embed-react'
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import React from 'react';
 
 function Hero() {
-  const CHATFLOW_ID = import.meta.env.VITE_CHATFLOW_ID;
-  const API_HOST = import.meta.env.VITE_API_HOST;
+  // const CHATFLOW_ID = import.meta.env.VITE_CHATFLOW_ID;
+  // const API_HOST = import.meta.env.VITE_API_HOST;
 
   const { isAuthenticated } = useContext(AuthContext);
   return (
@@ -33,7 +34,7 @@ function Hero() {
               <a href="#customer-request-form" className="btn btn-primary w-[40%]">
               Customer
               </a>
-              <Link to={isAuthenticated ? "/main" : "/login"} className="btn btn-primary w-[40%]">
+              <Link to="/main" className="btn btn-primary w-[40%]">
               SmartAgent
               </Link>
             </div>
@@ -44,7 +45,7 @@ function Hero() {
       <div id="customer-request-form">
         <RequestForm />
       </div>
-      <BubbleChat 
+      {/* <BubbleChat 
         chatflowid={CHATFLOW_ID} 
         apiHost={API_HOST}
         theme={{
@@ -82,7 +83,7 @@ function Hero() {
                   sendButtonColor: "#3B81F6",
               }
           }
-      }} />
+      }} /> */}
       <Footer />
     </div>
   );

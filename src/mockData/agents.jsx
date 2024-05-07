@@ -1,5 +1,15 @@
 export const agents = [
   {
+    id: 10,
+    email: "test@demo.example",
+    full_name: "SmartAgent Demo",
+    password_digest:
+      "$2a$12$MRYbsUEhw2I7AOX7WLx9O.CUC2WJVYG4/VbXN4wyBW8twNGrf68rO",
+    role_id: null,
+    created_at: "2024-04-23T00:33:54.568Z",
+    updated_at: "2024-04-23T00:33:54.568Z",
+  },
+  {
     id: 7,
     email: "oswaldo_cronin@dickens.example",
     full_name: "Brian Johns",

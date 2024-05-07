@@ -1,5 +1,5 @@
 // State management is centralized here
-import { createContext, useReducer, useContext } from "react";
+import React, { createContext, useReducer, useContext } from "react";
 
 export const ACTIONS = {
   SET_VIEW: "SET_VIEW",
@@ -126,7 +126,10 @@ const INITIAL_STATE = {
   agents: [],
   inboxTickets: [],
   ticketUpdated: false,
-  loggedInAgent: {},
+  loggedInAgent: {
+    agent_id: "10",
+    full_name: "SmartAgent Demo",
+  },
   unreadMessages: [],
 };
 

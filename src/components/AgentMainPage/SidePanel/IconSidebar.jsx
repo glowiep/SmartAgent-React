@@ -1,7 +1,7 @@
 import { menuItems } from "../../../constants/sidebar-menu-items";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../../../context/AuthContext";
 import { GrLogout } from "react-icons/gr";
 import { useAppContext } from "../../../context/AppContext";
@@ -11,19 +11,10 @@ import { MdMarkChatUnread } from "react-icons/md";
 
 
 function IconSidebar() {
-  const { logout } = useContext(AuthContext);
   const {state, dispatch} = useAppContext();
 
-  const handleLogout = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.delete("http://localhost:3000/logout");
-      console.log(response.data);
-      logout();
-      navigate("/");
-    } catch (error) {
-      console.error(error);
-    }
+  const handleLogout = () => {
+    return <Navigate to="/" />;
   };
 
   return (
