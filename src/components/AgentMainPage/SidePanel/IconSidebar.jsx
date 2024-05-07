@@ -1,17 +1,12 @@
 import { menuItems } from "../../../constants/sidebar-menu-items";
 import { Link, Navigate } from "react-router-dom";
-import axios from "axios";
-import React, { useContext } from "react";
-import { AuthContext } from "../../../context/AuthContext";
+import React from "react";
 import { GrLogout } from "react-icons/gr";
 import { useAppContext } from "../../../context/AppContext";
 import { MdMarkChatUnread } from "react-icons/md";
 
-
-
-
 function IconSidebar() {
-  const {state, dispatch} = useAppContext();
+  const { state } = useAppContext();
 
   const handleLogout = () => {
     return <Navigate to="/" />;
