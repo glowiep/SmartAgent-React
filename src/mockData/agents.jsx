@@ -1,4 +1,4 @@
-const agents = [
+export const agents = [
   {
     id: 7,
     email: "oswaldo_cronin@dickens.example",

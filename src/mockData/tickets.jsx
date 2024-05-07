@@ -1,4 +1,4 @@
-const tickets = [
+export const tickets = [
   {
     id: 11,
     from_email: "glorialim.dev@gmail.com",

@@ -1,4 +1,4 @@
-const direct_chats = [
+export const direct_chats = [
   {
     id: 1,
     sender_id: 2,

@@ -1,4 +1,4 @@
-const notes = [
+export const notes = [
   {
     id: 96,
     ticket_id: 32,

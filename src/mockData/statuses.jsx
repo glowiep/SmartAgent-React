@@ -1,4 +1,4 @@
-const statuses = [
+export const statuses = [
   {
       "id": 1,
       "description": "Open",

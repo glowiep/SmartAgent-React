@@ -1,4 +1,4 @@
-const conversations = [
+export const conversations = [
   {
     id: 30,
     ticket_id: 12,
