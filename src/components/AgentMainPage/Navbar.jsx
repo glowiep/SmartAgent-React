@@ -1,22 +1,13 @@
 import { AuthContext } from "../../context/AuthContext";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Navigate } from "react-router-dom";
 import React, { useContext } from "react";
 
 function Navbar() {
-  const { logout, isAuthenticated } = useContext(AuthContext);
-  const navigate = useNavigate();
-  const handleLogout = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.delete("http://localhost:3000/logout");
-      console.log(response.data);
-      logout();
-      navigate("/login");
-    } catch (error) {
-      console.error(error);
-    }
+  const { isAuthenticated } = useContext(AuthContext);
+  const handleLogout = () => {
+    return <Navigate to="/" />;
   };
+
   return (
     isAuthenticated && (<nav>
       <div className="navbar bg-base-100 shadow-md">
