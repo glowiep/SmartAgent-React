@@ -1,7 +1,5 @@
 import { useEffect, useRef } from "react";
 import { ACTIONS, useAppContext } from "../../context/AppContext";
-import axios from "axios";
-import ActionCable from "actioncable";
 
 const useFetchInboxTickets = (setIsLoading) => {
   const { state, dispatch } = useAppContext();
@@ -69,28 +67,28 @@ const useFetchInboxTickets = (setIsLoading) => {
     }
   };
 
-  useEffect(() => {
-    const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
-    const subscription = cable.subscriptions.create("TicketsChannel", {
-      received: (data) => {
-        const ticketInInbox = inboxTicketsRef.current.find(
-          (t) => t.id === data.id
-        );
+  // useEffect(() => {
+  //   const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+  //   const subscription = cable.subscriptions.create("TicketsChannel", {
+  //     received: (data) => {
+  //       const ticketInInbox = inboxTicketsRef.current.find(
+  //         (t) => t.id === data.id
+  //       );
 
-        if (data.deleted) {
-          dispatch({ type: ACTIONS.DELETE_INBOX_TICKET, payload: data.id });
-        } else if (ticketInInbox) {
-          dispatch({ type: ACTIONS.UPDATE_INBOX_TICKET, payload: data });
-        } else {
-          dispatch({ type: ACTIONS.ADD_INBOX_TICKET, payload: data });
-        }
-      },
-    });
+  //       if (data.deleted) {
+  //         dispatch({ type: ACTIONS.DELETE_INBOX_TICKET, payload: data.id });
+  //       } else if (ticketInInbox) {
+  //         dispatch({ type: ACTIONS.UPDATE_INBOX_TICKET, payload: data });
+  //       } else {
+  //         dispatch({ type: ACTIONS.ADD_INBOX_TICKET, payload: data });
+  //       }
+  //     },
+  //   });
 
-    return () => {
-      cable.subscriptions.remove(subscription);
-    };
-  }, [dispatch]);
+  //   return () => {
+  //     cable.subscriptions.remove(subscription);
+  //   };
+  // }, [dispatch]);
 
   return null; // or you can return any JSX element if needed
 };
