@@ -11,7 +11,7 @@ import { IoIosMailOpen } from "react-icons/io";
 import TransferConfirmationModal from "../Modal/TransferConfirmationModal";
 
 // import { FaArrowsUpDown } from "react-icons/fa6";
-import ActionCable from "actioncable";
+// import ActionCable from "actioncable";
 
 // react-resizable-panels
 // import {
@@ -51,18 +51,18 @@ function TicketInfo() {
   const scrollToBottom = () => {
     conversationsEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
-  useEffect(() => {
-    const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
-    const subscription = cable.subscriptions.create("NotesChannel", {
-      received: (data) => {
-        setNotes([data, ...notes]);
-        setNewNote(true);
-      },
-    });
-    return () => {
-      cable.subscriptions.remove(subscription);
-    };
-  }, [notes]);
+  // useEffect(() => {
+  //   const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+  //   const subscription = cable.subscriptions.create("NotesChannel", {
+  //     received: (data) => {
+  //       setNotes([data, ...notes]);
+  //       setNewNote(true);
+  //     },
+  //   });
+  //   return () => {
+  //     cable.subscriptions.remove(subscription);
+  //   };
+  // }, [notes]);
 
   useEffect(() => {
     axios.get("api/v1/notes").then((response) => {

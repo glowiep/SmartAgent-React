@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import ActionCable from "actioncable";
+// import ActionCable from "actioncable";
 import { useAppContext } from "../../context/AppContext";
 
 // Date formatting
@@ -29,38 +29,38 @@ const DirectChat = ({ agent, currentAgentId }) => {
 
   useEffect(scrollToBottom, [apiMessages]);
 
-  useEffect(() => {
-    console.log("Current agent ID:", currentAgentId);
-    const endpoint = `api/v1/direct_chats?sender_id=${currentAgentId}&receiver_id=${agent.id}`;
+  // useEffect(() => {
+  //   console.log("Current agent ID:", currentAgentId);
+  //   const endpoint = `api/v1/direct_chats?sender_id=${currentAgentId}&receiver_id=${agent.id}`;
 
-    // Fetch initial messages from the server
-    axios
-      .get(endpoint)
-      .then((response) => {
-        setApiMessages(response.data);
-      })
-      .catch((error) => {
-        console.error("There was an error!", error);
-      });
+  //   // Fetch initial messages from the server
+  //   axios
+  //     .get(endpoint)
+  //     .then((response) => {
+  //       setApiMessages(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("There was an error!", error);
+  //     });
 
-    // Create a WebSocket connection
-    const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
+  //   // Create a WebSocket connection
+  //   const cable = ActionCable.createConsumer("ws://localhost:3000/cable");
 
-    // Subscribe to the DirectChatChannel
-    const subscription = cable.subscriptions.create("DirectChatChannel", {
-      received: (response) => {
-        console.log("Received a message:", response);
-        if (response.receiver_id === Number(currentAgentId)) {
-          setApiMessages((prevMessages) => [...prevMessages, response]);
-        }
-      },
-    });
+  //   // Subscribe to the DirectChatChannel
+  //   const subscription = cable.subscriptions.create("DirectChatChannel", {
+  //     received: (response) => {
+  //       console.log("Received a message:", response);
+  //       if (response.receiver_id === Number(currentAgentId)) {
+  //         setApiMessages((prevMessages) => [...prevMessages, response]);
+  //       }
+  //     },
+  //   });
 
-    return () => {
-      // Disconnect from the WebSocket when the component unmounts
-      cable.subscriptions.remove(subscription);
-    };
-  }, [currentAgentId, agent.id]);
+  //   return () => {
+  //     // Disconnect from the WebSocket when the component unmounts
+  //     cable.subscriptions.remove(subscription);
+  //   };
+  // }, [currentAgentId, agent.id]);
 
   /**
    * Handles the input change event.
